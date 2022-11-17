@@ -1,4 +1,9 @@
-# 7AutoresAngular
+# Ejercicio de Autores - Componente Angular
+
+Contiene el Front, consulmiento las API del server que almacena los datos
+
+usada componentes (listar, Editar y crear).  manejar los errores.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
 

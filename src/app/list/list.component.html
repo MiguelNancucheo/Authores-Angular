@@ -1,0 +1,18 @@
+<a routerLink="/new">Add an author</a>
+<p>We have quotes by:</p>
+<p *ngIf="msgError"> {{ msgError }}</p>
+<table>
+  <tr>
+    <td>Author</td>
+    <td>Actions available</td>
+  </tr>
+  <tr *ngFor="let author of authorsList">
+    <td>{{ author.name }}</td>
+    <td class="lin_btn">
+        <div>
+          <a [routerLink]="['/edit/' + author._id]"><div class="btn">Edit</div></a>
+        </div>
+       <button class="btn" (click)="delAuthorId_Service(author._id)">Delete</button>
+    </td>
+  </tr>
+</table>

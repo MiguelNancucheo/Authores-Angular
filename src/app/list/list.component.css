@@ -1,0 +1,32 @@
+table {
+  border: 2px solid black;
+}
+tr {
+  border-bottom: 2px solid black;
+}
+.lin_btn {
+  display: flex;
+  margin: 5px 10px;
+  justify-content: space-between;
+}
+div.btn, button {
+  margin: 5px;
+  padding: 5px;
+  background-color: #da841b;
+  color: white;
+}
+div.btn {
+  width: 80px;
+  text-align: center;
+}
+button {
+  width: 90px;
+  border: 0px;
+  cursor: pointer;
+}
+td a{
+  text-decoration: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}

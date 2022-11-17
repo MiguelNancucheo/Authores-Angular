@@ -1,0 +1,16 @@
+<a href="">Home</a>
+<p>Add a new author</p>
+<form (submit)="newAuthor_Service()" method="post">
+  <table>
+    <tr><td>Mame:</td></tr>
+    <tr><td><input type="text" name="name" [(ngModel)]="newAuthor.name" placeholder="Ingresa autor"></td></tr>
+    <tr><td class="cont_btn">
+      <button class="btn" (click)="goBack()">Cancel</button>
+      <button class="btn" type="submit">SUBMIT</button>
+    </td></tr>
+    <tr *ngIf="(msgError)"><td class="error">{{ msgError }}</td></tr>
+  </table>
+ </form>
+
+
+

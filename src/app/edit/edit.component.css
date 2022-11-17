@@ -1,0 +1,35 @@
+table {
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid black;
+}
+
+td {
+  margin: 5px;
+  padding: 5px;
+}
+
+.cont_btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  width: 100px;
+  margin: 5px;
+  padding: 8px;
+  border: 0px;
+  border-radius: 5px;
+  background-color: #66BBFF;
+  color: white;
+  cursor: pointer;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+}
+
+.error {
+  color: red;
+}
