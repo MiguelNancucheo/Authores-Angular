@@ -2,7 +2,7 @@
 <p>Edit this author</p>
 <form (submit)="UpdateAuthorId_Service(idAuthor.id)" method="post">
   <table>
-    <tr><td>Mame:</td></tr>
+    <tr><td>Name:</td></tr>
     <tr><td><input type="text" name="name" [(ngModel)]="author.name" placeholder="Ingresa autor"></td></tr>
     <tr><td class="cont_btn">
       <button class="btn" (click)="goBack()">Cancel</button>

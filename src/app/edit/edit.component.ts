@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from '../http.service';
 
 @Component({
@@ -15,14 +14,15 @@ export class EditComponent implements OnInit {
 
   constructor(
       private _httpService: HttpService,
-      private location: Location,
-      private rutaActiva: ActivatedRoute) { }
+      private rutaActiva: ActivatedRoute,
+      private router: Router) { }
 
   ngOnInit(): void {
     this.author = { name: "" }
     this.idAuthor = this.rutaActiva.snapshot.params
     console.log(this.idAuthor)
-    this._httpService.getAuthorId(this.idAuthor.id)
+    //buscando los datos del author
+    this._httpService.getAuthorId( this.idAuthor.id )
         .subscribe( {
           next: (result) => {
             console.log('Consulta OK : ' + JSON.stringify(result) )
@@ -44,12 +44,17 @@ export class EditComponent implements OnInit {
       this.msgError = "Ingrese un nombre";
       return
     }
-    //el largo lo valida el server
+    //validando el largo, para no implementar validaciones complejas en el modelo.
+    if ( comprueba.length < 3 ) {
+      this.msgError = "Ingrese un nombre de más de 2 caracteres";
+      return
+    }
     this._httpService.updAuthorId( id, this.author )
       .subscribe( {
           next: (result) => {
             console.log('Grabado edición OK : ' + JSON.stringify(result) )
-            this.location.back()
+            // this.location.back()
+            this.router.navigate( [ '/list' ] )
           } ,
           error: (error) => {
             console.log('Grabado edición Error: ' + JSON.stringify(error) )
@@ -59,7 +64,7 @@ export class EditComponent implements OnInit {
   }
 
   goBack() {
-    this.location.back();
+    this.router.navigate( [ '/list' ] );
   }
 
 }

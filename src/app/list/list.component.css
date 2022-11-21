@@ -1,32 +1,51 @@
+* {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
 table {
-  border: 2px solid black;
+  border-collapse: collapse;
+  border: 1px solid #000000;
+  margin: 5px;
 }
-tr {
-  border-bottom: 2px solid black;
+tr:nth-child(odd) {
+  background-color: #b9b9b9;
 }
-.lin_btn {
+.lin_titulo {
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  margin: 0px;
+  border: 1px solid #000000;
+  padding: 5px 8px;
+  color: blueviolet;
+}
+
+.cont_btn {
   display: flex;
   margin: 5px 10px;
   justify-content: space-between;
 }
-div.btn, button {
+button {
   margin: 5px;
   padding: 5px;
-  background-color: #da841b;
+  /* background-color: #da841b; */
   color: white;
-}
-div.btn {
-  width: 80px;
-  text-align: center;
-}
-button {
   width: 90px;
   border: 0px;
   cursor: pointer;
+  border-radius: 5px;
 }
-td a{
-  text-decoration: none;
-  border: 0;
-  margin: 0;
-  padding: 0;
+.error {
+  color: red;
+}
+p {
+  color: blueviolet;
+}
+.btn_color1 {
+  background: linear-gradient(to bottom, #CDDCF0,#425A6A 90%, #202020);
+}
+.btn_color2 {
+  background: linear-gradient(to bottom, #DACAB8,#445A69 90%, #202020);
 }

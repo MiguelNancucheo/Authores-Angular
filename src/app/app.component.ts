@@ -13,18 +13,7 @@ export class AppComponent implements OnInit{
   constructor (private _httpService: HttpService, private formBuilder: FormBuilder) {}
 
   ngOnInit() {
-    //Funcion inicial
-
-    // this.listAuhtors()
 
   }
 
-  // listAuhtors() {
-  //   this._httpService.getAuthors().subscribe({
-  //     next: (result) => {
-  //         this.authorsList =  result
-  //         console.log( result)
-  //     }
-  //   })
-  // }
 }

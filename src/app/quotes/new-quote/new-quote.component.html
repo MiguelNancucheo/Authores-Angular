@@ -1,0 +1,16 @@
+<div class="cont_nav">
+  <a href="/">Home</a>
+  <a [routerLink]="['/quotes/quote/' + author._id]">Quotes</a>
+</div>
+<p>Provide a quote by {{ author.name }}</p>
+<form (submit)="newQuoteAuthor_Service(author._id)" method="post">
+  <table>
+    <tr><td>Quote:</td></tr>
+    <tr><td><input type="text" name="name" [(ngModel)]="cita.quotename" placeholder="Ingresa cita"></td></tr>
+    <tr><td class="cont_btn">
+      <button class="btn" (click)="goBack()">Cancel</button>
+      <button class="btn" type="submit">SUBMIT</button>
+    </td></tr>
+    <tr *ngIf="(msgError)"><td class="error">{{ msgError }}</td></tr>
+  </table>
+ </form>

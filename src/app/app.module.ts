@@ -7,6 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NewComponent } from './new/new.component';
 import { EditComponent } from './edit/edit.component';
 import { ListComponent } from './list/list.component';
+import { QuotesComponent } from './quotes/quotes.component';
+import { ListQuotesComponent } from './quotes/list-quotes/list-quotes.component';
+import { NewQuoteComponent } from './quotes/new-quote/new-quote.component';
 
 
 @NgModule({
@@ -14,7 +17,10 @@ import { ListComponent } from './list/list.component';
     AppComponent,
     NewComponent,
     EditComponent,
-    ListComponent
+    ListComponent,
+    QuotesComponent,
+    ListQuotesComponent,
+    NewQuoteComponent
   ],
   imports: [
     BrowserModule,

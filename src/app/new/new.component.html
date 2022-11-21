@@ -1,8 +1,9 @@
-<a href="">Home</a>
-<p>Add a new author</p>
+<a href="/">Home</a>
+<!-- <p>Add a new author</p> -->
+<p>Add a new quotable author:</p>
 <form (submit)="newAuthor_Service()" method="post">
   <table>
-    <tr><td>Mame:</td></tr>
+    <tr><td>Name:</td></tr>
     <tr><td><input type="text" name="name" [(ngModel)]="newAuthor.name" placeholder="Ingresa autor"></td></tr>
     <tr><td class="cont_btn">
       <button class="btn" (click)="goBack()">Cancel</button>

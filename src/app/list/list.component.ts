@@ -22,7 +22,7 @@ export class ListComponent implements OnInit {
     this._httpService.getAuthors().subscribe({
       next: (result) => {
           this.authorsList =  result
-          console.log( result)
+          // console.log( result)
       } ,
       error: (error) => {
         console.log('Consulta Error: ' + JSON.stringify(error) )
@@ -36,7 +36,7 @@ export class ListComponent implements OnInit {
     this._httpService.delAuthorId(id)
     .subscribe( {
       next: (result) => {
-        console.log('Eliminación OK : ' + JSON.stringify(result) )
+        // console.log('Eliminación OK : ' + JSON.stringify(result) )
         //cargar la pagina
         this.listAuhtors()
       } ,

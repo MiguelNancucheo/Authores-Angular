@@ -1,0 +1,24 @@
+<div class="cont_nav">
+  <a href="/">Home</a>
+  <a [routerLink]="['/quotes/new/' + author._id]">Add an quote</a>
+</div>
+<p>Quotes by {{ author.name }}:</p>
+<p *ngIf="msgError" class="error"> {{ msgError }}</p>
+<table>
+  <tr>
+    <td><span class="lin_titulo">Quote</span></td>
+    <td><span class="lin_titulo">Votes</span></td>
+    <td><span class="lin_titulo">Actions available</span></td>
+  </tr>
+  <tr *ngFor="let quote of author.quotes">
+    <td>{{ quote.quotename }}</td>
+    <td class="centro">{{ quote.votes }}</td>
+    <td><div class="lin_btn">
+       <button class="color1" (click)="voteUpQuote(author._id, quote._id)">Vote up</button>
+       <button class="color2" (click)="voteDownQuote(author._id, quote._id)">Vote down</button>
+       <!-- <button class="color2" (click)="voteDownQuote(author._id, quote._id)" disabled *ngIf="(quote.votes < 1)">Vote down</button> -->
+       <button class="color3" (click)="deleteQuote(author._id, quote._id)">Delete</button>
+      </div>
+    </td>
+  </tr>
+</table>

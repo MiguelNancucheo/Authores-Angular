@@ -1,0 +1,63 @@
+* {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+.cont_nav {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+.lin_titulo{
+  /* background-color: rgb(87, 120, 121); */
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #000000;
+}
+tr:nth-child(odd) {
+  background-color: #b9b9b9;
+}
+td {
+  border: 0px;
+  margin: 0px;
+  padding: 5px 8px;
+  border: 1px solid #000000;
+  color: blueviolet;
+}
+
+td.centro {
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: 5px;
+  color: white;
+  width: 90px;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.color1 {
+  /* background-color: #da841b; */
+  background: linear-gradient(to bottom, #e4f8eb,#425A6A 90%, #202020);
+
+}
+.color2 {
+  background: linear-gradient(to bottom, #DACAB8,#445A69 90%, #202020);
+}
+
+.color3 {
+  background: linear-gradient(to bottom, #fcdede,#445A69 90%, #202020);
+}
+
+.error {
+  color: red;
+}
+
+p {
+  color: blueviolet;
+}

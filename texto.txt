@@ -1,0 +1,17 @@
+
+Edit
+Route to a component that has a form just like the one on '/new/', but pre-pulate the form with the autho's name
+
+Dirija a un componente que tenga un formulario como el de '/nuevo/', pero complete previamente el formulario con el nombre del autor.
+
+
+Backend validations 
+Use mongoose to ensure you only save authors and quotes that are at least three charactes log.  Display error messages to the user.
+
+Use mongoose para asegurarse de que solo guarda autores y citas que tienen al menos tres caracteres de registro. Mostrar mensajes de error al usuario.
+
+
+Routing
+redirect to the author's details page upon succesful submission or when tha cancel button is pressed.
+
+redirigir a la página de detalles del autor en el envío exitoso o cuando se presiona el botón cancelar.

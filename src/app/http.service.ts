@@ -11,24 +11,39 @@ export class HttpService {
   constructor(private _http: HttpClient) { }
 
   getAuthors(){
-    return this._http.get( this.urlLocal + '/auhors' )
+    return this._http.get( this.urlLocal + '/authors' )
   }
 
-  newAuthor(author:{}){
+  newAuthor( author:{} ){
     return this._http.post( this.urlLocal + '/new', author )
   }
 
-  getAuthorId(id: string) {
-    return this._http.get( this.urlLocal + '/author/' + id )
+  getAuthorId( idAuthor: string)  {
+    return this._http.get( this.urlLocal + '/author/' + idAuthor )
   }
 
-  updAuthorId(id: string, author: {}) {
-    return this._http.put( this.urlLocal + '/author/' + id , author )
+  updAuthorId( idAuthor: string, author: {}) {
+    return this._http.put( this.urlLocal + '/author/' + idAuthor , author )
   }
 
-  delAuthorId(id: string) {
-    return this._http.delete( this.urlLocal + '/author/' + id )
+  delAuthorId( idAuthor: string ) {
+    return this._http.delete( this.urlLocal + '/author/' + idAuthor )
   }
+
+  newQuoteAuthorId( idAuthor: string, quote: {} ) {
+    return this._http.put( this.urlLocal + '/newquote/' + idAuthor , quote )
+  }
+
+  updVoteQuote( idAuthor: string, quote: {} ) {
+    // console.log(`Service:  idAuthor: ${idAuthor}, quote: ${ JSON.stringify(quote)}`)
+    return this._http.put( this.urlLocal + '/votequote/' + idAuthor , quote )
+  }
+
+  delQuoteAuthor( idAuthor: string, quote: {} ) {
+    // console.log(`Service:  idAuthor: ${idAuthor}, quote: ${ JSON.stringify(quote)}`)
+    return this._http.put( this.urlLocal + '/quote/' + idAuthor , quote )
+  }
+
 }
 
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new',
@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
 export class NewComponent implements OnInit {
   constructor(
         private _httpService: HttpService,
-        private location: Location) { }
+        private router: Router) { }
 
   newAuthor:any;
   msgError = "" ;
@@ -31,8 +31,8 @@ export class NewComponent implements OnInit {
     this._httpService.newAuthor( this.newAuthor )
       .subscribe( {
           next: (result) => {
-            console.log('Ingreso OK : ' + JSON.stringify(result) )
-            this.location.back()
+            // console.log('Ingreso OK : ' + JSON.stringify(result) )
+            this.router.navigate( [ '/list' ] )
           } ,
           error: (error) => {
             console.log('Ingreso Error: ' + JSON.stringify(error) )
@@ -42,6 +42,6 @@ export class NewComponent implements OnInit {
   }
 
   goBack() {
-    this.location.back();
+    this.router.navigate( [ '/list' ] )
   }
 }
